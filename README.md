@@ -17,3 +17,6 @@ pipless installation info:
 
 rebuild info:
 `python -m build`
+
+if you're actually trying to use indexes lmao after building lol:
+`uv pip install --extra-index-url https://test.pypi.org/simple/ --index-strategy unsafe-best-match doublebase-coder`
