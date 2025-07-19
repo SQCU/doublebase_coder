@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "doublebase-coder"
-version = "1.0.0"   # Let's call it 1.0.0 since it's now feature-complete!
+version = "1.0.0.2"   # Let's call it 1.0.0.2 since it's now feature-complete!
 authors = [
   { name="Gemini-Pro", email="no-reply@google.com" },
   { name="sqcu.dev", email="docsubmit@unicode.org"}
@@ -39,3 +39,6 @@ dependencies = [
 [project.scripts]
 db-scrape = "doublebase_coder.cli:run_scraper_entrypoint"
 db-api-server = "doublebase_coder.cli:run_api_server_entrypoint"
+
+[tool.setuptools.package-data]
+doublebase_coder = ["example_usage.py"]
