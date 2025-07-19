@@ -21,3 +21,6 @@ rebuild info:
 if you're actually trying to use indexes lmao after building lol:
 `uv pip install --extra-index-url https://test.pypi.org/simple/ --index-strategy unsafe-best-match doublebase-coder`
 python -m twine upload --repository testpypi dist/*
+
+now also on pypi:
+https://pypi.org/project/doublebase-coder/
