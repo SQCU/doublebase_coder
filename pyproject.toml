@@ -1,0 +1,41 @@
+# This file configures the build system and project metadata
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doublebase-coder"
+version = "1.0.0"   # Let's call it 1.0.0 since it's now feature-complete!
+authors = [
+  { name="Gemini-Pro", email="no-reply@google.com" },
+  { name="sqcu.dev", email="docsubmit@unicode.org"}
+]
+description = "A library to encode 128-bit checksums into a human-friendly decimal and emoji hybrid format."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file="LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Archiving :: Compression",
+]
+
+# This is critical: list all libraries your code depends on.
+dependencies = [
+    "Flask",
+    "requests",
+    "httpx",
+    "regex",
+]
+
+[project.urls]
+"Homepage" = "https://sqcu.dev"
+"Bug Tracker" = "https://aistudio.google.com"
+
+# This section makes your scripts available as command-line tools after installation.
+[project.scripts]
+db-scrape = "doublebase_coder.cli:run_scraper_entrypoint"
+db-api-server = "doublebase_coder.cli:run_api_server_entrypoint"
